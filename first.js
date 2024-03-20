@@ -92,3 +92,125 @@ console.log(true == '1')        // true
 
 console.log(true === '1')        // false
 console.log(true === 1)           // false
+
+// -------------------------------19-03-2024--------------------------------------
+
+// let & var
+// --> keyword
+// --> used for declare variables
+
+// let is introduced in es6
+
+// var a = 10;
+// console.log(a);
+
+// a = 10;
+// console.log(a);   //Cannot access 'a' before initialization
+// var a;
+
+// -------------------------------19-03-2024--------------------------------------
+
+// Q-1 
+// let unit = 350;
+// let bill = 0;
+// if(unit <= 100){
+//     bill = unit * 0.6 
+//     console.log(bill + 50);
+// }
+// else if(unit >100 && unit <= 300){
+//     bill = 60 + (unit-100)*0.8
+//     console.log(bill + 50)
+// }
+
+// else{
+//     bill = 60 + 160 + (unit-300) * 0.9
+    
+//     if (bill > 300){
+//         bill = bill + bill*0.15
+//         console.log(bill + 50)
+//     }
+//     else{
+//         console.log(bill + 50)
+//     }
+    
+// }
+
+// Q-2
+
+// let sal = 25000;
+// let Gsal = 0;
+// if(sal < 5000){
+//     Gsal = sal * 0.28
+//     console.log(Gsal)
+// }
+
+// else if(sal <= 10000){
+//     Gsal = 1400 + (sal-5000)*0.42
+//     console.log(Gsal)
+// }
+
+// else if(sal <= 15000){
+//     Gsal = 1400 + 1600 + (sal-10000)*0.55
+//     console.log(Gsal)
+// }
+// else{
+//     Gsal = 1400 + 1600 + 2250 + (sal-15000) * 0.7
+//     console.log(Gsal)
+// }
+
+// Q-3
+
+// let income = 5200;
+// let tax = 0;
+// if(income < 2500){
+//     console.log("No tax");
+// }
+// else if(income < 5000){
+//     tax = (income-2500) * 0.1
+//     console.log("Tax :"+tax);
+// }
+// else if(income <= 10000){
+//     tax = 250 + (income - 5000) * 0.2
+//     console.log("Tax :"+tax);
+// }
+// else if(income > 1000){
+//     tax = 250 + 1000 + (income - 10000) * 0.3
+//     console.log("Tax :"+tax);
+// }
+
+// Q - 4
+
+// let math = 21;
+// let che = 30;
+// let phy = 28;
+
+// let total = math + che + phy
+
+// let ave = total / 3
+
+// if ( ave >= 75){
+//     console.log("A Greade");
+// }
+// else if(ave < 75 && ave >= 60){
+//     console.log("B Greade");
+// }
+// else if(ave < 60 && ave >= 45){
+//     console.log("C Greade");
+// }
+// else if(ave < 45 && ave >= 35){
+//     console.log("D Greade");
+// }
+// else{
+//     console.log("  falied ");
+// }
+
+// Q - 6
+
+let x = 500;
+let y = 2000;
+if(x < 2000 || x > 3000){
+    console.log(" X ");
+}
+else if(y>100 && y<500){
+    console.log(" Y ");
+}
