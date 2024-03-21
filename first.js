@@ -287,3 +287,34 @@
 // else if(y>100 && y<500){
 //     console.log(" Y ");
 // }
+
+// -------------------------------21-03-2024--------------------------------------
+// functions
+
+// function one(){
+//     console.log("Hello world");
+// }
+// one()
+
+// function one(param1){
+//     return param1;
+// }
+// console.log(one("one"));
+
+function one(param1,param2,param3){
+    return param1 + param2 + param3
+}
+console.log(one("one","two","three"));            //onetwothree
+console.log(one("one","two","three","four"));     //onetwothree 
+console.log(one("one","two"));                     //onetwoundefiend
+console.log(one("one","two",undefined));          //onetwoundefined
+console.log(one(null,"two",undefined));          //nulltwoundefined
+console.log(one(null," ",undefined));            //null undefined     space as patameter
+console.log(one(null,NaN,null));                //NaN
+console.log(one(10,NaN,12));                    //NaN
+console.log(one(10,21,undefined));              //NaN
+console.log(one(10,undefined,21));              //NaN
+console.log(one(10,null,21));                   //31
+console.log(one(10,21,null));                   //31
+console.log(one('10',null,21));                   //10null21
+console.log(one(10,'21',null));                   //1021null
