@@ -213,43 +213,38 @@
 // let sal = 25000;
 // let Gsal = 0;
 // if(sal < 5000){
-//     Gsal = sal * 0.28
-//     console.log(Gsal)
+//     Gsal = sal * 0.28     
 // }
 
 // else if(sal <= 10000){
 //     Gsal = 1400 + (sal-5000)*0.42
-//     console.log(Gsal)
 // }
 
 // else if(sal <= 15000){
-//     Gsal = 1400 + 1600 + (sal-10000)*0.55
-//     console.log(Gsal)
+//     Gsal = 1400 + 2100 + (sal-10000)*0.55
 // }
 // else{
-//     Gsal = 1400 + 1600 + 2250 + (sal-15000) * 0.7
-//     console.log(Gsal)
+//     Gsal = 1400 + 2100 + 2750 + (sal-15000) * 0.7)
 // }
+// console.log(Gsal)
 
 // Q-3
 
 // let income = 5200;
 // let tax = 0;
 // if(income < 2500){
-//     console.log("No tax");
+//    tax = 0;
 // }
 // else if(income < 5000){
 //     tax = (income-2500) * 0.1
-//     console.log("Tax :"+tax);
 // }
 // else if(income <= 10000){
 //     tax = 250 + (income - 5000) * 0.2
-//     console.log("Tax :"+tax);
 // }
-// else if(income > 1000){
+// else if(income > 10000){
 //     tax = 250 + 1000 + (income - 10000) * 0.3
-//     console.log("Tax :"+tax);
 // }
+//     console.log("Tax :"+tax);
 
 // Q - 4
 
