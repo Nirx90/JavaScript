@@ -301,20 +301,71 @@
 // }
 // console.log(one("one"));
 
-function one(param1,param2,param3){
-    return param1 + param2 + param3
-}
-console.log(one("one","two","three"));            //onetwothree
-console.log(one("one","two","three","four"));     //onetwothree 
-console.log(one("one","two"));                     //onetwoundefiend
-console.log(one("one","two",undefined));          //onetwoundefined
-console.log(one(null,"two",undefined));          //nulltwoundefined
-console.log(one(null," ",undefined));            //null undefined     space as patameter
-console.log(one(null,NaN,null));                //NaN
-console.log(one(10,NaN,12));                    //NaN
-console.log(one(10,21,undefined));              //NaN
-console.log(one(10,undefined,21));              //NaN
-console.log(one(10,null,21));                   //31
-console.log(one(10,21,null));                   //31
-console.log(one('10',null,21));                   //10null21
-console.log(one(10,'21',null));                   //1021null
+// function one(param1,param2,param3){
+//     return param1 + param2 + param3
+// }
+// console.log(one("one","two","three"));            //onetwothree
+// console.log(one("one","two","three","four"));     //onetwothree 
+// console.log(one("one","two"));                     //onetwoundefiend
+// console.log(one("one","two",undefined));          //onetwoundefined
+// console.log(one(null,"two",undefined));          //nulltwoundefined
+// console.log(one(null," ",undefined));            //null undefined     space as patameter
+// console.log(one(null,NaN,null));                //NaN
+// console.log(one(10,NaN,12));                    //NaN
+// console.log(one(10,21,undefined));              //NaN
+// console.log(one(10,undefined,21));              //NaN
+// console.log(one(10,null,21));                   //31
+// console.log(one(10,21,null));                   //31
+// console.log(one('10',null,21));                   //10null21
+// console.log(one(10,'21',null));                   //1021null
+
+
+
+// -------------------------------22-03-2024--------------------------------------
+
+// function one(){
+//     return "Hello"
+// }
+// function two(){
+//     return one()
+// }
+// console.log(two())      // hello
+
+
+
+// function one(){
+//     return "Hello"
+// }
+// function two(){
+//     return one                // no bracate means now function two become fn one
+// }
+// console.log(two())          // [Function: one]
+// console.log(two()())        // Hello
+
+
+
+// function one(){
+//     return "Hello"
+// }
+// function two(){
+//     return one()
+// }
+// function three(){
+//     return two
+// }
+// console.log(three())             //[Function: two]
+// console.log(three()())            // hello
+
+
+// function one(){
+//     return "Hello"
+// }
+// function two(){
+//     return one
+// }
+// function three(){
+//     return two
+// }
+// console.log(three())             //[Function: two]
+// console.log(three()())           //[Function: one]
+// console.log(three()()())         //Hello
