@@ -364,3 +364,67 @@
 // console.log(three())             //[Function: two]
 // console.log(three()())           //[Function: one]
 // console.log(three()()())         //Hello
+
+// --------------------------------- 23-03-2024 ---------------------------------
+
+// -> function as a parameter 
+
+// function one()
+// {
+//     return "Hello One"
+// }
+// function two()
+// {
+//     return "Hello Two"
+// }
+// function three(param1,param2)
+// {
+//     console.log(param1(),param2())      // one and two become parameter and after
+// }                                       // that breackate () means function called
+// three(one,two)
+
+// ------------------------------------------------------------------------------
+
+// -------------------------------27-03-2024--------------------------------------
+
+// Arrays
+// index start from zero 0
+// symbol = []
+
+let arr = [1,2,'three',4,'5',6,'seven',"8","9",10]
+
+console.log(arr);             //[1,2,'three',4,'5',6,'seven',"8","9",10]
+console.log(arr[0]);          // 1
+console.log(arr[3]);          // 4
+console.log(arr['0']);        // 1       //consider value
+console.log(arr['3']);        // 4
+
+console.log(arr[1.5]) ;        // undefined
+
+
+arr[1.5] = 1.5
+
+console.log(arr[1.5]);          // 1.5       this will store in key value formate
+                                //           key is 1.5 and value is 1.5
+
+arr['name'] = 'Nirav';
+// console.log(arr[name]);             // name is not defined
+
+console.log(arr['name']);             // "Nirav"
+
+console.log(arr[-1])                 // undefined
+
+arr[-1] = 2.5
+console.log(arr[-1])                 // 2.5
+
+console.log(typeof(arr))         // object
+
+console.log(arr.length)           //10 length is property not function
+
+//Defination :- the Array object as with arrays in other programming language
+//              enables storing a collection of multiple items under a single
+//        variable name, and has member for performing common array operations
+
+
+// the length data property of an Array instance represents the number of 
+// element in that array
