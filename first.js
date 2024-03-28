@@ -425,6 +425,62 @@ console.log(arr.length)           //10 length is property not function
 //              enables storing a collection of multiple items under a single
 //        variable name, and has member for performing common array operations
 
+// the length data property of an Array instance represents the number of 
+// element in that array
+
+// -------------------------------28-03-2024--------------------------------------
+
+// let arr = [1,2,3,4,5,6]
+
+// console.log(arr);
+
+// arr[10] = 11
+
+// console.log(arr);         //  [ 1, 2, 3, 4, 5, 6, <4 empty items>, 11 ]
+
+// console.log(arr[7]) ;       // at 7 position value is empty but valu is undefined
+//                            // so result is undefined
+// arr[7] = undefined
+
+// console.log(arr);       
+// // [ 1, 2, 3, 4, 5, 6, <1 empty item>, undefined, <2 empty items>, 11 ]
+
+// console.log(arr[8] == undefined)          //true
+// console.log(arr[8] === undefined)         //true
+
+// arr[7] = null
+
+// console.log(arr)
+// //[ 1, 2, 3, 4, 5, 6, <1 empty item>, null, <2 empty items>, 11 ]
+
+// // undefined null NaN
+
+// console.log(undefined == undefined)       //true
+// console.log(undefined === undefined)      // true
+
+
+// console.log(null == null)      // true
+// console.log(null === null)      // true
+
+
+// console.log(NaN === NaN)      // false     
+// // becoz NaN is type of number but not number so value is not same
+// console.log(NaN === NaN)      // false 
+// becoz NaN is type of number but not number so value is not same
+// and type is same but value is not same thats why false (===)
+// if value and data typer both same than (===) return true
+
+// console.log(undefined == null);      // true
+// console.log(undefined === null)      // false
+
+
+// console.log(undefined === NaN)      // false
+// console.log(undefined === NaN)      // false
+
+
+// console.log(NaN === null)      // false
+// console.log(NaN === null)      // false
+
 
 // the length data property of an Array instance represents the number of 
 // element in that array
