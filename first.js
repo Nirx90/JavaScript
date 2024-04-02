@@ -484,3 +484,155 @@ console.log(arr.length)           //10 length is property not function
 
 // the length data property of an Array instance represents the number of 
 // element in that array
+
+// -------------------------------30-03-2024--------------------------------------
+
+// push function
+
+// Defination: The push() method of Array instances adds the specified elements
+//              to the end of an array and returns the new length of the array.
+
+// syntax
+// push()
+//push()
+//push(elemnt1)
+//push(elemnt1,element2)
+//push(elemnt1,element2,.....elementN)
+
+//Return value
+// The new length property of the object upon which the method was called.
+
+// let ar1=[10,20,30,40,50]
+// ar1.push(80)
+// console.log(ar1)                  // [ 10, 20, 30, 40, 50, 80 ]
+// console.log(ar1.push(120))        // 7 because its returns new length
+
+// ar1.push(21,22,23)
+// console.log(ar1)                  // [ 10, 20, 30, 40, 50, 80, 120, 21, 22, 23 ]
+
+//------------------------
+
+// pop function
+
+//Defination : The pop() method of Array instances removes the last element 
+//            from an array and returns that element. This method changes
+//             the length of the array.
+
+//Return value
+// The removed element from the array; undefined if the array is empty.
+
+// let ar1=[10,20,30,40,50]
+// ar1.pop()
+// console.log(ar1)             //[ 10, 20, 30, 40 ]
+// console.log(ar1.pop())      // 40  -- returns last removed value
+
+//------------------------
+
+// shift function
+
+// Defination: The shift() method of Array instances removes the first 
+//             element from an array and returns that removed element. 
+//              This method changes the length of the array.
+
+//Return value
+// The removed element from the array; undefined if the array is empty.
+
+
+// let ar1=[10,20,30,40,50]
+// ar1.shift()
+// console.log(ar1)             //[ 20, 30, 40,50 ]
+// console.log(ar1.shift())      // 20  -- returns first removed value
+
+//------------------------
+
+// unshift function
+
+// Defination: The unshift() method of Array instances adds the specified 
+//             elements to the beginning of an array and returns the new 
+//             length of the array.
+
+//syntax
+//unshift()
+//unshift(element1)
+//unshift(element1,element2)
+//unshift(element1,element2,......,elementN)
+
+//Return value
+// The new length property of the object upon which the method was called.
+
+// let ar1=[10,20,30,40,50]
+// ar1.unshift()
+// console.log(ar1.unshift())    // 5 -- returns new lenght (no element so new lenght is same as old)        
+// console.log(ar1)             //[ 10,20, 30, 40,50 ]
+
+// ar1.unshift(26)
+// console.log(ar1)             //[26,10,20, 30, 40,50 ]
+// console.log(ar1.unshift(211))      // 7  -- returns new lenght
+
+// ar1.unshift(26,45,23)
+// console.log(ar1)             // [ 26, 45, 23, 211, 26, 10, 20, 30, 40, 50 ]
+
+//------------------------
+
+//Defination : The splice() method of Array instances changes the contents of 
+//             an array by removing or replacing existing elements and/or 
+//             adding new elements in place.
+
+//syntax
+//splice()
+//splice(start)
+//splice(start,deletcount)
+//splice(start,deletcount,item1)
+//splice(start,deletcount,item1,item2)
+//splice(start,deletcount,item1,item2,......itemN)
+
+//Return value
+//An array containing the deleted elements.
+//If only one element is removed, an array of one element is returned.
+//If no elements are removed, an empty array is returned.
+
+// let ar1 = [10,20,30,40,50,60,70,80,90,100]
+
+// console.log(ar1.splice())                    //[]
+// console.log(ar1.splice(5))                   //[ 60, 70, 80, 90, 100 ]
+// console.log(ar1.splice(5,2))                 //[ 60, 70 ]
+// console.log(ar1.splice(5,2,600,700,800))        //[ 60, 70 ]
+
+// console.log(ar1)                           
+//  [ 10, 20, 30, 40, 50, 600, 700, 800, 80, 90, 100 ]
+
+// console.log(ar1.splice(0))                    
+// [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 ]
+
+// console.log(ar1)                              //[]  
+
+
+// console.log(ar1.splice(0,1))                   // [10]
+
+// console.log(ar1.splice(7))                   // [80,90,100]
+
+// console.log(ar1.splice(2,15))    
+// //[ 30, 40, 50, 60, 70, 80, 90, 100 ]
+
+// console.log(ar1)                          //  [10,20]
+
+//  0    1    2    3    4    5    6    7    8     9
+//  10   20   30   40   50   60   70   80   90   100
+// -10   -9   -8   -7   -6   -5   -4   -3   -2    -1
+
+// console.log(ar1.splice(-3))                 // [80,90,100]
+// console.log(ar1.splice(-5,2))                 // [60,70]
+// console.log(ar1.splice(-1,9))                 // [100]
+// console.log(ar1.splice(-5,5))                 // [60,70,80,90,100]
+
+// console.log(ar1.splice(-3,3,300))       
+// console.log(ar1)                           
+// [ 10, 20, 30, 40, 50, 60, 70, 300 ]
+
+// console.log(ar1.splice(-5,3,300,200))                 // [80,90,100]
+// console.log(ar1)          
+//[ 10, 20, 30, 40, 50, 300, 200, 90, 100 ]              
+
+
+//------------------------
+//Deep copy
