@@ -635,4 +635,141 @@ console.log(arr.length)           //10 length is property not function
 
 
 //------------------------
+//slice function
+
+// Defination: The slice() method of Array instances returns a shallow copy of 
+//             a portion of an array into a new array object selected from
+//              start to end (end not included) where start and end represent
+//              the index of items in that array. The original array will not
+//              be modified.
+
+
+//Syntax
+//slice()
+//slice(start)
+//slice(start, end)
+
+// let ar1 = [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 ]
+
+//  0    1    2    3    4    5    6    7    8     9
+//  10   20   30   40   50   60   70   80   90   100
+// -10   -9   -8   -7   -6   -5   -4   -3   -2    -1
+
+//slice does not incluede last index
+// always from left to right --->
+
+// console.log(ar1.slice(5))            //[ 60, 70, 80, 80, 90, 100 ]
+// console.log(ar1)                   // 10, 20, 30, 40, 50, 60, 70, 80, 80, 90, 100 ]
+
+// console.log(ar1.slice(1,6))            // [20, 30, 40, 50, 60 ]
+
+// console.log(ar1.slice(-6))            // [ 60, 70, 80, 80, 90, 100 ]
+// console.log(ar1.slice(-3,-6))            // []
+// console.log(ar1.slice(-6,9))            // [ 50, 60, 70, 80, 90 ]
+
+// console.log(ar1.slice(-3,15))            // [ 80, 90, 100 ]
+
+// console.log(ar1.slice(3,-4))            // [ 40, 50, 60 ]
+
+// console.log(ar1.slice(-5,3))            // []
+
+
+//------------------------
 //Deep copy
+
+// let ar1 = [10,20,30,40]
+// let ar2 = ar1
+// ar2.push(90)                        //when we change into ar 2 but 
+//                                     // becaause of deep copy it will also change to ar1
+// console.log(ar1)                //[ 10, 20, 30, 40, 90 ]
+// console.log(ar2)                //[ 10, 20, 30, 40, 90 ]
+
+
+//------------------------
+//shallow copy
+
+// let ar1 = [10,20,30,40]
+// let ar2 = ar1.slice()
+// ar2.push(90)                        //when we change into ar 2 only change  
+//                                     // into ar2 because shallow copy
+// console.log(ar1)                //[ 10, 20, 30, 40 ]
+// console.log(ar2)                 //[ 10, 20, 30, 40, 90 ]
+
+// -------------------------------02-04-2024--------------------------------------
+// spread operator
+
+// let ar1 = [10,20,30,40]
+// let ar2 = [50,70,80,90]
+
+// let ar3;
+// console.log([ar1,ar2])          //[ [ 10, 20, 30, 40 ], [ 50, 70, 80, 90 ] ]
+// console.log([...ar1,...ar2])    //[ 10, 20, 30, 40, 50, 70, 80, 90 ]
+
+// ar3 = [...ar1]
+// console.log(ar3)               //[ 10, 20, 30, 40 ]
+
+// ar3 = [50,...ar1]
+// console.log(ar3)               //[ 50, 10, 20, 30, 40 ]
+
+// ar3 = [...ar1,50]
+// console.log(ar3)               //[ 10, 20, 30, 40, 50 ]
+
+// ar3 = [...ar1,...ar2]
+// console.log(ar3)           //[ 10, 20, 30, 40, 50, 70, 80, 90 ]
+
+
+// let ar1 = [10,20,30,40]
+// let ar2 = [50,70,80,90]
+
+// let ar3 = [...ar1]
+// ar3.push(12)
+// console.log(ar3)             //[ 10, 20, 30, 40, 12 ]
+
+// reverse function
+// let str1 = [50,70,80,90]
+// let str2 = str1.reverse()
+// console.log(str2)                       //[ 90, 80, 70, 50 ]
+// console.log(str1.reverse())          //[ 90, 80, 70, 50 ]
+
+//
+// -------------------------------03-04-2024--------------------------------------
+
+// Functions
+//1) Named Function
+//2) Anonymus Function
+//3) rest parameter in Function
+//4) default parameter in Function
+//5) optional parameter in Function
+//6) generators Function
+//7) constructor Function
+//8) IIFE Function
+
+// Anonymus Function
+
+// let/var/const = variable-name () => {
+//     function body
+// }
+
+// //calling function by variable name
+// variable-name()
+
+//examples
+
+// let fun_one = ()  => {
+//     return "test"
+// }
+// console.log(fun_one)                 //[Function: fun_one]
+// console.log(fun_one())                // test
+
+// one liner aerow function in anonymus function
+
+// let fun_one = () => "hello"
+// console.log(fun_one())                 // hello
+
+// this is one liner function which is used when onely one this need to returns
+
+// let fun_one = (arg1) => arg1
+// console.log(fun_one("Ginni"))           // Ginni
+
+// let fun_one = (arg1,arg2) => arg1+arg2
+// console.log(fun_one(10,30))                 // 40
