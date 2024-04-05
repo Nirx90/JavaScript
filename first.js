@@ -773,3 +773,89 @@ console.log(arr.length)           //10 length is property not function
 
 // let fun_one = (arg1,arg2) => arg1+arg2
 // console.log(fun_one(10,30))                 // 40
+
+// -------------------------------05-04-2024--------------------------------------
+
+// Anonymus function
+// Ex 1)
+
+// let fun_one = () => {
+//     return () =>{    
+//     }
+// }             
+// console.log(fun_one())                // [Function (anonymous)]
+// console.log(fun_one()())                // undefine
+
+// Ex 2)
+
+// let fun_one = () => {
+//     return () =>{ 
+//         console.log("HII Nirav")   
+//     }
+// }             
+// // console.log(fun_one())                // [Function (anonymous)]
+// // fun_one()()                           // Hii Nirav
+// console.log(fun_one()())                // undefined coz inside function return nothing
+
+// Ex 3)
+
+// let fun_one = () => {
+//     return () =>{ 
+//         return () =>{ 
+//            return "Hii Parth"
+//         }
+//     }
+// }             
+
+// console.log(fun_one())                  // [Function (anonymous)]
+// console.log(fun_one()())                 // [Function (anonymous)] 
+// console.log(fun_one()()())               // Hii Parth 
+
+
+// Anonymus function as a parameter
+
+// Ex 1)
+
+// let fun_one = (arg1) => {
+//     console.log(arg1)                      //[Function (anonymous)]
+//     console.log(arg1())                      //param1 
+// }
+// fun_one(()=> "param1")   
+
+
+// Ex 2)
+
+// let fun_one = (arg1) => {
+//     console.log(arg1)                      //[Function: fun_param]
+//     console.log(arg1())                      //FaceBook 
+// }
+// function fun_param(){
+//     return "FaceBook"
+// }
+// fun_one(fun_param) 
+
+// Ex 3)
+// let fun_one = (arg1,arg2,arg3) => {
+//     console.log(arg1,arg2,arg3)     
+//    // [Function (anonymous)] [Function (anonymous)] [Function (anonymous)]                
+//     console.log(arg1(),arg2(),arg3())                //param1 param2 param3  
+    
+// }
+// fun_one(()=> "param1",()=> "param2",()=> "param3") 
+
+// Default parameter function
+
+// function one(arg1,arg2,arg3){
+//     console.log(arg1,arg2,arg3)        //undefined undefined undefined
+// }
+// one()
+
+// function one(arg1,arg2,arg3="zero"){
+//     console.log(arg1,arg2,arg3)        //one two zero
+// }
+// one("one","two")
+
+// function one(arg1="one",arg2,arg3="Three"){
+//     console.log(arg1,arg2,arg3)        //one undefined Three
+// }
+// one()
