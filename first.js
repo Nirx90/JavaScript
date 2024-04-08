@@ -859,3 +859,72 @@ console.log(arr.length)           //10 length is property not function
 //     console.log(arg1,arg2,arg3)        //one undefined Three
 // }
 // one()
+
+
+// -------------------------------08-04-2024--------------------------------------
+
+// Rest Parameter in function
+// position of spread argument is always occure in last
+
+//ex 1)
+
+// function fun_one(...arg1){
+//     console.log(arg1)                       // [ 'hello1' ]
+//     console.log(typeof(arg1))              // object
+// }
+
+// fun_one("hello1")
+
+//ex 2)
+
+// function fun_one(arg1,...arg2){
+//     console.log(arg1,arg2)                    // Nirav [ 'shakshi', 'Parth' ]
+
+// }
+
+// fun_one("Nirav","shakshi","Parth")
+
+//ex 3)
+
+// function fun_one(arg1,arg2="Fine",...arg3){
+//     console.log(arg1,arg2,arg3)                   // Hello1 Fine [ 'Hello2', 'Hello3', 'Hello4' ]
+// }
+// fun_one("Hello1",undefined,"Hello2","Hello3","Hello4")
+
+
+// IIFE function
+// Immidiate Invokable Function Expression
+
+// Syntax (()=>{}())
+//ex 1)
+
+// ((arg1)=>{
+//     console.log(arg1)            //hello1
+// })("hello1")
+
+//ex 2)
+
+// ((arg1,arg2,arg3)=>{
+//     console.log(arg1,arg2,arg3)            //hello1 hello2 hello3
+// })("hello1","hello2","hello3")
+
+//ex 3)
+
+// ((arg1,arg2)=>{
+//     console.log(arg1,arg2)                  //[Function (anonymous)] Shakshi
+// })(()=>"Hii Niroo","Shakshi")
+
+//ex 4)
+
+// ((arg1,arg2)=>{
+//     console.log(arg1(),arg2)                  //Hii Niroo Shakshi
+// })(()=>{return "Hii Niroo"},"Shakshi")
+
+//ex 5)
+
+// ((arg1,arg2)=>{
+//     console.log(arg1(),arg2)                  //anonFunc hello1
+// })(
+//     ()=> "anonFunc",
+//     "hello1"
+// )
