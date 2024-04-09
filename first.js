@@ -928,3 +928,12 @@ console.log(arr.length)           //10 length is property not function
 //     ()=> "anonFunc",
 //     "hello1"
 // )
+
+// -------------------------------09-04-2024--------------------------------------
+
+// findIndex Function
+let ar1 = [5,10,8,130,44]
+
+let isLarge = (elem) => elem>9;
+
+console.log(ar1.findIndex(isLarge))
