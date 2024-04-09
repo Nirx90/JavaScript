@@ -17,6 +17,29 @@
 // }
 // console.log(reverse());
 
+// Aerrow 
+// let reverse = (x) =>{
+//     result = 0
+//     while(x != 0){
+//         result = result * 10 + ~~(x%10);
+//         x = ~~(x/10);
+//      }
+//     return result;
+// }
+// console.log(reverse(2345))
+
+// IIFE
+// ((x)=>{
+//     result = 0
+//     while(x != 0){
+//         result = result * 10 + ~~(x%10);
+//         x = ~~(x/10);
+//      }
+//     // return result;
+//     console.log(result);
+// })(56487)
+
+
 // 2. Write a JavaScript function that checks whether a passed string is palindrome or not?
 // A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g.,
 // madam or nurses run.
