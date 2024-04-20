@@ -957,3 +957,73 @@ let ar1 = [5,10,8,130,44]
 //         return em<18
 //     })
 // )
+
+
+// -------------------------------13-04-2024--------------------------------------
+
+// flat function
+// The flat() method of Array instances creates a new array with all
+// sub-array elements concatenated into it recursively up to the specified
+// depth.
+
+// let ar1=[1,2,3,4]
+// console.log(ar1)
+
+// let ar1 = [[1,[2]],[[3],[4]]]
+
+// console.log(ar1.flat())        //[ 1, [ 2 ], [ 3 ], [ 4 ] ]     by default depth 1
+// console.log(ar1.flat(1))        //[ 1, [ 2 ], [ 3 ], [ 4 ] ]
+// console.log(ar1.flat(2))        // [ 1, 2, 3, 4 ]
+
+
+// for each function
+
+// let ar1 = [1,2,3,"four",5,6,7,8,9,10]
+
+// ar1.forEach((Element)=>{
+//     console.log(Element)
+// })
+// 1
+// 2
+// 3
+// four
+// 5
+// 6
+// 7
+// 8
+// 9
+// 10
+
+// ar1.forEach((element,index)=>{
+//     console.log(index,"-",element)
+// })
+
+// 0 - 1
+// 1 - 2
+// 2 - 3
+// 3 - four
+// 4 - 5
+// 5 - 6
+// 6 - 7
+// 7 - 8
+// 8 - 9
+// 9 - 10
+
+// for of function
+// let ar1 = [1,2,3,"four",5,6,7,8,9,10]
+
+// for(let element of ar1){
+//     console.log(element)
+// }
+
+// for in function
+
+// let ar1 = {'1':'one','2':'two','3':'three'}
+
+// for(let key in ar1){
+//     console.log(key,ar1[key])
+// }
+
+// 1 one
+// 2 two
+// 3 three
