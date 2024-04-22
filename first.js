@@ -1055,3 +1055,45 @@ let ar1 = [5,10,8,130,44]
 //         })
 //     })
 // })
+
+
+// -------------------------------20-04-2024--------------------------------------
+
+let stock = {
+    fruit : ["apple","banana","strawberry"],
+    liquid : ["water","ice"],
+    holder : ["cone","stick","cup"],
+    toppines : ["chocolate","peanuts"]
+}
+let order = (call_production) =>{
+    setTimeout(() => {
+    console.log("order placed. please call production");
+    console.log(`${stock.fruit[1]} fruit selected`)
+    call_production();
+    }, 1000);
+    
+}
+
+let production = () =>{
+    console.log("production has started");
+    setTimeout(() => {
+        console.log("the fruit has been chopped");
+        setTimeout(() => {
+            console.log(`${stock.liquid[1]} is added`);
+            setTimeout(() => {
+                console.log("Machine has started");
+                setTimeout(() => {
+                    console.log(`ice cream has placed on ${stock.holder[1]}`);
+                    setTimeout(() => {
+                        console.log(`${stock.toppines[1]} is selected`);
+                        setTimeout(() => {
+                            console.log("ice cream is ready to serve")
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+}
+
+order(production)
