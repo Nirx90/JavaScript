@@ -1097,3 +1097,36 @@ let production = () =>{
 }
 
 order(production)
+
+// -------------------------------23-04-2024--------------------------------------
+
+
+let stock = {
+    fruit : ["apple","banana","strawberry"],
+    liquid : ["water","ice"],
+    holder : ["cone","stick","cup"],
+    toppines : ["chocolate","peanuts"]
+}
+
+let is_open = true;
+let order = (time,work) => {
+    return new Promise((resolve,reject)=>{
+        if(is_open){
+            setTimeout(() => {
+                resolve(work())
+            }, time);
+        }
+        else{
+            reject(console.log("shop is closed"));
+        }
+    })
+}
+
+order(1000,()=> console.log(`${stock.fruit[1]} fruit selected`))
+.then(()=> order(1000,()=> console.log("the fruit has been chopped")))
+.then(()=> order(1000,()=> console.log(`${stock.liquid[1]} is added`)))
+.then(()=> order(1000,()=> console.log("Machine has started")))
+.then(()=> order(1000,()=> console.log(`ice cream has placed on ${stock.holder[1]}`)))
+.then(()=> order(1000,()=> console.log(`${stock.toppines[1]} is selected`)))
+.then(()=> order(1000,()=> console.log("ice creame is served")))
+
